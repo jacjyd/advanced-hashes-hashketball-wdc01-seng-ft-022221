@@ -143,7 +143,6 @@ def player_index(name)
       n 
     end 
   end
-
 end 
 
 #methods to pass
