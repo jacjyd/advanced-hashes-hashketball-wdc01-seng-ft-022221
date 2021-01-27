@@ -174,7 +174,7 @@ end
 def shoe_size(name)
   team = player_team(name)
   index = player_index(name)
-  game_hash[team][:players][index][:shoe_size]
+  game_hash[team][:players][index][:shoe]
 end 
 
 def team_colors (team)
