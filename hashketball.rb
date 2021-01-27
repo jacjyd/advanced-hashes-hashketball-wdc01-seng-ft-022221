@@ -215,7 +215,8 @@ end
 def big_shoe_rebounds
   rebounds = nil
   shoe_sizes = []
-  game_hash[:home][:players]
+  game_hash[:home][:players].map {|n| shoe_sizes << n[:shoe]}
+  game_hash[:away][:players].map {|n| shoe_sizes << n[:shoe]}
 end 
 
 #bonus methods
