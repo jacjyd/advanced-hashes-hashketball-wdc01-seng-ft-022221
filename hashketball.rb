@@ -166,8 +166,9 @@ end
 #methods to pass
 
 def num_points_scored(name)
-  
-  
+  team = player_team(name)
+  index = player_index(name)
+  game_hash[team][:players][index][:points]
 end
 
 def shoe_size(name)
