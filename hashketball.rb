@@ -217,6 +217,8 @@ def big_shoe_rebounds
   shoe_sizes = []
   game_hash[:home][:players].map {|n| shoe_sizes << n[:shoe]}
   game_hash[:away][:players].map {|n| shoe_sizes << n[:shoe]}
+  
+  shoe_sizes.max
   binding.pry
   puts "find max and then something something"
 end 
