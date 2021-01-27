@@ -214,7 +214,8 @@ end
 
 def big_shoe_rebounds
   rebounds = nil
-  
+  shoe_sizes = []
+  game_hash[:home][:players]
 end 
 
 #bonus methods
