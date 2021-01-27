@@ -1,3 +1,5 @@
+require 'pry'
+
 # Write your code below game_hash
 def game_hash
   {
@@ -127,3 +129,80 @@ def game_hash
 end
 
 # Write code here
+
+#helper functions or something
+
+def player_index(name)
+  game_hash[:home][:players].each_index do |n|
+    if game_hash[:home][:players][n].values.include?(name)
+      n
+    end 
+  end
+  game_hash[:away][:players].each_index do |n|
+    if game_hash[:home][:players][n].values.include?(name)
+      n 
+    end 
+  end
+
+end 
+
+#methods to pass
+
+def num_points_scored(name)
+  if game_hash[:home][:players].flatten.flatten.include?(name)
+    game_hash[:home][:players][index(name)][:points]
+  elsif
+  game_hash[:away][:players].flatten.flatten.include?(name)
+    game_hash[:away][:players][index(name)][:points]
+  end
+  
+  binding.pry
+  puts "hmmmm"
+end
+
+def shoe_size(name)
+
+end 
+
+def team_colors (team)
+    
+end 
+
+
+def team_names
+  teams = []
+  game_hash.each_value do |value|
+    teams << value[:team_name]
+  end 
+  teams
+end 
+
+def player_numbers (team)
+  
+end 
+
+def player_stats (name)
+  
+end 
+
+def big_shoe_rebounds
+  
+end 
+
+#bonus methods
+
+def most_points_scored 
+  
+end 
+
+def winning_team
+  
+end
+
+def player_with_longest_name
+  
+end 
+
+def long_name_steals_a_ton?
+  
+end 
