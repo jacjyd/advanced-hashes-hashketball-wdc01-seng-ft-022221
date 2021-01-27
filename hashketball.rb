@@ -198,7 +198,7 @@ end
 
 def player_numbers (team)
   if game_hash[:home][:team_name] == team 
-    game_hash[:home][:colors]
+    game_hash[:home][:players].map 
   elsif game_hash[:away][:team_name] == team 
     game_hash[:away][:colors]
   else
