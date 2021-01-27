@@ -134,12 +134,12 @@ end
 
 def player_index(name)
   game_hash[:home][:players].each do |n|
-    if game_hash[:home][:players][n].values.include?(name)
+    if n.values.include?(name)
       n
     end 
   end
   game_hash[:away][:players].each do |n|
-    if game_hash[:home][:players][n].values.include?(name)
+    if n.values.include?(name)
       n 
     end 
   end
