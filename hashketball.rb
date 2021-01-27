@@ -172,7 +172,9 @@ def num_points_scored(name)
 end
 
 def shoe_size(name)
-
+  team = player_team(name)
+  index = player_index(name)
+  game_hash[team][:players][index][:shoe_size]
 end 
 
 def team_colors (team)
@@ -193,7 +195,8 @@ def player_numbers (team)
 end 
 
 def player_stats (name)
-  
+    team = player_team(name)
+  index = player_index(name)
 end 
 
 def big_shoe_rebounds
