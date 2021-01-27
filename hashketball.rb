@@ -219,12 +219,12 @@ def big_shoe_rebounds
   game_hash[:away][:players].map {|n| shoe_sizes << n[:shoe]}
   
   game_hash[:home][:players].each_with_index do |element, n|
-    if element[:shoe] == shoe_sizes.max
+    if [:shoe] == shoe_sizes.max
       game_hash[:home][:players][:rebounds]
     end 
   end
   game_hash[:away][:players].each_with_index do |element, n|
-    if element[:shoe] == shoe_sizes.max
+    if [:shoe] == shoe_sizes.max
       game_hash[:away][:players][:rebounds]
     end 
   end 
