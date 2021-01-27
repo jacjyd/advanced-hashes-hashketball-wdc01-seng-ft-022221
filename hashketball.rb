@@ -138,7 +138,7 @@ def player_index(name)
       n
     end 
   end
-  game_hash[:away][:players].each do |n|
+  game_hash[:away][:players].each_with_index do |element, n|
     if element.values.include?(name)
       n 
     end 
