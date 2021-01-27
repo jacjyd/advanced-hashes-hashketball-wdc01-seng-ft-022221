@@ -198,9 +198,9 @@ end
 
 def player_numbers (team)
   if game_hash[:home][:team_name] == team 
-    game_hash[:home][:players].map {|n| 
+    game_hash[:home][:players].map {|n| n.values[:number]}
   elsif game_hash[:away][:team_name] == team 
-    game_hash[:away][:colors]
+    game_hash[:home][:players].map {|n| n.values[:number]}
   else
     puts "Team not found"
   end 
