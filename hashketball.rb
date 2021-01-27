@@ -195,8 +195,9 @@ def player_numbers (team)
 end 
 
 def player_stats (name)
-    team = player_team(name)
+  team = player_team(name)
   index = player_index(name)
+  game_hash[team][:players][index]
 end 
 
 def big_shoe_rebounds
