@@ -136,7 +136,6 @@ def player_index(name)
   index = nil
   game_hash[:home][:players].each_with_index do |element, n|
     if element.values.include?(name)
-      binding.pry
       index = n
     end 
   end
@@ -144,6 +143,7 @@ def player_index(name)
     if element.values.include?(name)
       index = n
     end 
+  end 
   index
 end 
 
