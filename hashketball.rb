@@ -133,13 +133,13 @@ end
 #helper functions or something
 
 def player_index(name)
-  game_hash[:home][:players].each do |n|
-    if n.values.include?(name)
+  game_hash[:home][:players].each_with_index do |element, n|
+    if element.values.include?(name)
       n
     end 
   end
   game_hash[:away][:players].each do |n|
-    if n.values.include?(name)
+    if element.values.include?(name)
       n 
     end 
   end
