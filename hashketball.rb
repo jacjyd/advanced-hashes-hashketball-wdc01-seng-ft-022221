@@ -197,7 +197,13 @@ def team_names
 end 
 
 def player_numbers (team)
-  
+  if game_hash[:home][:team_name] == team 
+    game_hash[:home][:colors]
+  elsif game_hash[:away][:team_name] == team 
+    game_hash[:away][:colors]
+  else
+    puts "Team not found"
+  end 
 end 
 
 def player_stats (name)
