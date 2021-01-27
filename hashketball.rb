@@ -223,7 +223,7 @@ def big_shoe_rebounds
       rebounds = game_hash[:home][:players][:rebounds]
     end 
   end
-  game_hash[:away][:players].each do |element
+  game_hash[:away][:players].each do |element|
     if element[:shoe] == shoe_sizes.max
       rebounds = game_hash[:away][:players][:rebounds]
     end 
