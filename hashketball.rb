@@ -133,17 +133,18 @@ end
 #helper functions or something
 
 def player_index(name)
+  index = nil
   game_hash[:home][:players].each_with_index do |element, n|
     if element.values.include?(name)
       binding.pry
-      n
+      index = n
     end 
   end
   game_hash[:away][:players].each_with_index do |element, n|
     if element.values.include?(name)
-      n
+      index = n
     end 
-  end
+  index
 end 
 
 #methods to pass
