@@ -134,12 +134,12 @@ end
 
 def player_team(name)
   team = nil
-  game_hash[:home][:players].each_with_index do |element, n|
+  game_hash[:home][:players].each do |element|
     if element.values.include?(name)
       team = :home
     end 
   end
-  game_hash[:away][:players].each_with_index do |element, n|
+  game_hash[:away][:players].each do |element|
     if element.values.include?(name)
       team = :away
     end 
