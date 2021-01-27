@@ -218,7 +218,17 @@ def big_shoe_rebounds
   game_hash[:home][:players].map {|n| shoe_sizes << n[:shoe]}
   game_hash[:away][:players].map {|n| shoe_sizes << n[:shoe]}
   
-  shoe_sizes.max
+  game_hash[:home][:players].each_with_index do |element, n|
+    if element[:shoe] == shoe_sizes.max
+      game_hash[:home][:players][:player_name]
+    end 
+  end
+  game_hash[:away][:players].each_with_index do |element, n|
+    if element.values.include?(name)
+      index = n
+    end 
+  end 
+  index
   binding.pry
   puts "find max and then something something"
 end 
