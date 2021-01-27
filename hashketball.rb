@@ -228,7 +228,6 @@ def big_shoe_rebounds
       game_hash[:away][:players][:player_name]
     end 
   end 
-  puts "find max and then something something"
 end 
 
 #bonus methods
