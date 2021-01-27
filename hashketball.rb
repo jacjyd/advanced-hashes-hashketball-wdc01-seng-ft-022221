@@ -132,6 +132,22 @@ end
 
 #helper functions or something
 
+def player_team(name)
+  team = nil
+  game_hash[:home][:players].each_with_index do |element, n|
+    if element.values.include?(name)
+      team = :home
+    end 
+  end
+  game_hash[:away][:players].each_with_index do |element, n|
+    if element.values.include?(name)
+      team = :away
+    end 
+  end 
+  team
+end 
+
+
 def player_index(name)
   index = nil
   game_hash[:home][:players].each_with_index do |element, n|
@@ -150,15 +166,8 @@ end
 #methods to pass
 
 def num_points_scored(name)
-  if game_hash[:home][:players].flatten.flatten.include?(name)
-    game_hash[:home][:players][index(name)][:points]
-  elsif
-  game_hash[:away][:players].flatten.flatten.include?(name)
-    game_hash[:away][:players][index(name)][:points]
-  end
   
-  binding.pry
-  puts "hmmmm"
+  
 end
 
 def shoe_size(name)
