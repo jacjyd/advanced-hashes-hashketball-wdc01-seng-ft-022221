@@ -228,7 +228,6 @@ def big_shoe_rebounds
       rebounds = element[:rebounds]
     end 
   end 
-  
   rebounds
 end 
 
