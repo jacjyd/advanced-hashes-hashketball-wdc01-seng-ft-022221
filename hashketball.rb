@@ -136,12 +136,12 @@ def player_index(name)
   game_hash[:home][:players].each_with_index do |element, n|
     if element.values.include?(name)
       binding.pry
-      puts "home"
+      n
     end 
   end
   game_hash[:away][:players].each_with_index do |element, n|
     if element.values.include?(name)
-      puts "away"
+      n
     end 
   end
 end 
