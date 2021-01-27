@@ -224,12 +224,10 @@ def big_shoe_rebounds
     end 
   end
   game_hash[:away][:players].each_with_index do |element, n|
-    if element.values.include?(name)
-      index = n
+    if element[:shoe] == shoe_sizes.max
+      game_hash[:away][:players][:player_name]
     end 
   end 
-  index
-  binding.pry
   puts "find max and then something something"
 end 
 
